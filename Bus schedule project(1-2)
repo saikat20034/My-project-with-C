@@ -1,0 +1,388 @@
+#include <stdio.h>
+#include<conio.h>
+#include <time.h>
+#include<windows.h>
+void Printf()
+{
+    printf("MAWLANA BHASHANI SCIENCE AND TECHNOLOGY UNIVERSITY\n");
+    printf("                 Bus Location\n");
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+void bus1(int h,int m)
+{
+    printf("    0001      ");
+    if((h==8 && (m<=50)) || (h==9 && (m<=50)) || (h==13 && (m>=10) && (m<=50)) || (h==17 && (m>=10) && (m<=50)) || ((h==18 && (m>=20)) || (h==19 && (m==0))) || ((h==20 && (m>=20)) || (h==21 && (m<=5))))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==8)
+            printf("08:50\n");
+        else if(h==9)
+            printf("09:50\n");
+        else if(h==13)
+            printf("13:50\n");
+        else if(h==17)
+            printf("17:50\n");
+        else if(h==18 || h==19)
+            printf("19:00\n");
+        else if(h==20 || h==21)
+            printf("21:05\n");
+
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<8 || h>=21)
+            printf("08:00");
+        else if(h==8)
+            printf("09:00");
+        else if((h>=9 && h<13) || (h==13 && m<10))
+            printf("13:10");
+        else if((h==13 && m>50) || (h>=14 && h<17) || (h==17 && m<10))
+            printf("17:10");
+        else if((h==17 && m>50) || (h==18 && m<20))
+            printf("18:20");
+        else if(h==19 || (h==20 && m<20))
+            printf("20:20");
+        printf("          -       \n");
+    }
+}
+
+void bus2(int h,int m)
+{
+    printf("    0002      ");
+    if((h==8 && (m<=50)) || (h==9 && (m<=50)) || (h==13 && (m>=10) && (m<=50)) || (h==16 && (m>=10) && (m<=50)) || (h==17 && (m>=10) && (m<=50)) || ((h==20 && (m>=20)) || (h==21 && (m<=5))))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==8)
+            printf("08:50\n");
+        else if(h==9)
+            printf("09:50\n");
+        else if(h==13)
+            printf("13:50\n");
+        else if(h==16)
+            printf("16:50\n");
+        else if(h==17)
+            printf("17:50\n");
+        else if(h==20 || h==21)
+            printf("21:05\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<8 || h>=21)
+            printf("08:00");
+        else if(h==8)
+            printf("09:00");
+        else if((h>=9 && h<13) || (h==13 && m<10))
+            printf("13:10");
+        else if((h==13 && m>50) || (h>=14 && h<16) || (h==16 && m<10))
+            printf("16:10");
+        else if((h==16 && m>50) || (h>=17 && h<20) || (h==20 && m<20))
+            printf("20:20");
+        printf("          -       \n");
+    }
+}
+void bus3(int h,int m)
+{
+    printf("    0003      ");
+    if((h==8 && (m<=50)) || (h==10 && (m>=10) && (m<=50)) || (h==13 && (m>=10) && (m<=50)) || (h==14 && (m>=10) && (m<=50)) || (h==17 && (m>=10) && (m<=50)) || ((h==20 && (m>=20)) || (h==21 && (m<=5))))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==8)
+            printf("08:50\n");
+        else if(h==10)
+            printf("10:50\n");
+        else if(h==13)
+            printf("13:50\n");
+        else if(h==14)
+            printf("14:50\n");
+        else if(h==17)
+            printf("17:50\n");
+        else if(h==20 || h==21)
+            printf("21:05\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<8 || h>=21)
+            printf("08:00");
+        else if(h==8 || h==9 || (h==10 && m<10))
+            printf("10:10");
+        else if((h==10 && m>50) || (h>=11 && h<13) || (h==13 && m<10))
+            printf("13:10");
+        else if((h==13 && m>50) || (h==14 && m<10))
+            printf("14:10");
+        else if((h==14 && m>50) || (h>=15 && h<17) || (h==17 && m<10))
+            printf("17:10");
+        else if((h==17 && m>50) || (h>=18 && h<20) || (h==20 && m<20))
+            printf("20:20");
+        printf("          -       \n");
+    }
+}
+void bus4(int h,int m)
+{
+    printf("    0004      ");
+    if((h==7 && (m<=50)) || (h==9 && (m<=50)) || (h==13 && (m>=10) && (m<=50)) || (h==14 && (m>=10) && (m<=50)) || (h==16 && (m>=10) && (m<=50)) || (h==17 && (m>=10) && (m<=50)))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==7)
+            printf("07:50\n");
+        else if(h==9)
+            printf("09:50\n");
+        else if(h==13)
+            printf("13:50\n");
+        else if(h==14)
+            printf("14:50\n");
+        else if(h==16)
+            printf("16:50\n");
+        else if(h==17)
+            printf("17:50\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<7 || (h==17 && m>=10) || h>17)
+            printf("07:00");
+        else if(h==7 || h==8)
+            printf("09:00");
+        else if((h==9 && m>50) || (h>=10 && h<13) || (h==13 && m<10))
+            printf("13:10");
+        else if((h==13 && m>50) || (h==14 && m<10))
+            printf("14:10");
+        else if((h==14 && m>50) || h==15 || (h==16 && m<10))
+            printf("16:10");
+        else if((h==16 && m>50) || (h==17 && m<10))
+            printf("17:10");
+        printf("          -       \n");
+    }
+}
+void bus5(int h,int m)
+{
+    printf("    0005      ");
+    if((h==8 && (m<=50)) || (h==9 && (m<=50)) || (h==10 && (m>=10) && (m<=50)) || (h==13 && (m>=10) && (m<=50)) || (h==17 && (m>=10) && (m<=50)) || ((h==18 && (m>=20)) || (h==19 && (m==0))))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==8)
+            printf("08:50\n");
+        else if(h==9)
+            printf("09:50\n");
+        else if(h==10)
+            printf("10:50\n");
+        else if(h==13)
+            printf("13:50\n");
+        else if(h==17)
+            printf("17:50\n");
+        else if(h==18 || h==19)
+            printf("19:00\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<8 || h>=19)
+            printf("08:00");
+        else if(h==8)
+            printf("09:00");
+        else if((h==9 && m>50) || (h==10 && m<10))
+            printf("10:10");
+        else if((h==10 && m>50) || (h>=11 && h<13) || (h==13 && m<10))
+            printf("13:10");
+        else if((h==13 && m>50) || (h>=14 && h<17) || (h==17 && m<10))
+            printf("17:10");
+        else if((h==17 && m>50) || (h==18 && m<20))
+            printf("18:20");
+        printf("          -       \n");
+    }
+}
+
+void Vbus1(int h,int m)
+{
+    printf("    0001      ");
+    if((h==9 && (m<=50)) || (h==17 && (m>=10) && (m<=50)))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==9)
+            printf("09:50\n");
+        else
+            printf("17:50\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<9 || (h==17 && m>50) || h>17)
+            printf("09:10");
+        else if((h==9 && m>50) || (h>9 && h<17) || (h==17 && m<10))
+            printf("17:10");
+        printf("          -       \n");
+    }
+}
+void Vbus2(int h,int m)
+{
+    printf("    0002      ");
+    if((h==12 && (m<=50)) || ((h==20 && (m>=30)) || (h==21 && (m<=5))))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==12)
+            printf("12:50\n");
+        else
+            printf("21:05\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<12 || (h==21 && m>5) || h>21)
+            printf("12:00");
+        else if((h==12 && m>50) || (h>12 && h<20) || (h==20 && m<30))
+            printf("20:30");
+        printf("          -       \n");
+    }
+}
+void Vbus3(int h,int m)
+{
+    printf("    0003      ");
+    if((h==17 && (m>=10) && (m<=50)) || ((h==20 && (m>=30)) || (h==21 && (m<=5))))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==17)
+            printf("17:50\n");
+        else
+            printf("21:05\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<17 || (h==17 && m<10) || (h==21 && m>5) || h>21)
+            printf("17:10");
+        else if((h==17 && m>50) || (h>17 && h<20) || (h==20 && m<30))
+            printf("20:30");
+        printf("          -       \n");
+    }
+}
+void Vbus4(int h,int m)
+{
+    printf("    0004      ");
+    if((h==9 && (m<=50)) || (h==14 && (m>=10) && (m<=50)))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==9)
+            printf("09:50\n");
+        else
+            printf("14:50\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<9 || (h==14 && m>50) || h>14)
+            printf("09:10");
+        else if((h==9 && m>50) || (h>9 && h<14) || (h==14 && m<10))
+            printf("14:10");
+        printf("          -       \n");
+    }
+}
+void Vbus5(int h,int m)
+{
+    printf("    0005      ");
+    if((h==12 && (m<=50)) || (h==14 && (m>=10) && (m<=50)))
+    {
+        printf("In Road");
+        printf("         -          ");
+        if(h==12)
+            printf("12:50\n");
+        else
+            printf("14:10\n");
+    }
+    else
+    {
+        printf("On Campus     ");
+        if(h<12 || (h==14 && m>50) || h>14)
+            printf("12:00");
+        else if((h==12 && m>50) || (h>12 && h<14) || (h==14 && m<10))
+            printf("20:10");
+        printf("          -       \n");
+    }
+}
+int main()
+{
+    int choice;
+    int h,m;
+    while(1)
+    {
+        system("cls");
+        int day1,day2,month1,month2,year1,year2;
+        printf("1. Bus Location in Local time.\n");
+        printf("2. Bus Location in specific time.\n");
+        printf("3. Exit\n\n");
+        printf("Please Choose One Option : ");
+        scanf("%d",&choice);
+        system("cls");
+        if(choice==1)
+        {
+            time_t t = time(NULL);
+            struct tm tm = *localtime(&t);
+            h=tm.tm_hour;
+            m=tm.tm_min;
+            printf("%d : %d\n\n\n",h,m);
+            Printf();
+            printf("              Saturday to Wednesday\n");
+            printf("              ---------------------\n");
+            printf("   Bus No.    Location    Departure     Arrival\n");
+            printf("   -------    --------    ---------     -------\n");
+            bus1(h,m);
+            bus2(h,m);
+            bus3(h,m);
+            bus4(h,m);
+            bus5(h,m);
+            printf("\n         Weekends day and Other Holidays\n");
+            printf("         -------------------------------\n");
+            printf("   Bus No.    Location    Departure     Arrival\n");
+            printf("   -------    --------    ---------     -------\n");
+            Vbus1(h,m);
+            Vbus2(h,m);
+            Vbus3(h,m);
+            Vbus4(h,m);
+            Vbus5(h,m);
+            printf("\n\nPress any key to continue.......");
+            getch();
+        }
+
+        if(choice==2)
+        {
+            printf("Enter time (24 hour format) : (HH MM) : ");
+            scanf("%d%d",&h,&m);
+            printf("%d : %d\n\n\n",h,m);
+            Printf();
+            printf("              Saturday to Wednesday\n");
+            printf("              ---------------------\n");
+            printf("   Bus No.    Location    Departure     Arrival\n");
+            printf("   -------    --------    ---------     -------\n");
+            bus1(h,m);
+            bus2(h,m);
+            bus3(h,m);
+            bus4(h,m);
+            bus5(h,m);
+            printf("\n         Weekends day and Other Holidays\n");
+            printf("         -------------------------------\n");
+            printf("   Bus No.    Location    Departure     Arrival\n");
+            printf("   -------    --------    ---------     -------\n");
+            Vbus1(h,m);
+            Vbus2(h,m);
+            Vbus3(h,m);
+            Vbus4(h,m);
+            Vbus5(h,m);
+            printf("\n\nPress any key to continue.......");
+            getch();
+        }
+        if(choice==3)
+            break;
+    }
+    return 0;
+}
+
